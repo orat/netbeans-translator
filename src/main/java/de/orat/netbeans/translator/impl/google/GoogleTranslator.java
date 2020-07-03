@@ -121,9 +121,9 @@ public class GoogleTranslator implements iTranslatorImpl {
     
     @Override
     public Map<String, String> readAvailableTargetLanguages() {
-        ResourceBundle bundle =  ResourceBundle.getBundle("de.orat.translator.impl.google.targetlanguages");
+        //ResourceBundle bundle =  ResourceBundle.getBundle("de.orat.translator.impl.google.targetlanguages");
         // test ob der folgende code auch funktioniert und damit automatisch lokalisiert
-        //ResourceBundle bundle = NbBundle.getBundle("targetlanguages");
+        ResourceBundle bundle = NbBundle.getBundle("de.orat.translator.impl.google.targetlanguages");
         Map<String, String> result = new HashMap<>();
         Enumeration<String> keyEnum = bundle.getKeys();
         while (keyEnum.hasMoreElements()){
