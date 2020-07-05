@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * Translator API class.
+ * 
  * @author Oliver Rettig
  */
 public class Translator {

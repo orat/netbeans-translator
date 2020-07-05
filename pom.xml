@@ -87,7 +87,7 @@
                     </archive>
                 </configuration>
             </plugin>
-            <!--plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.6</version>
@@ -100,7 +100,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin-->
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -124,7 +124,7 @@
             <version>RELEASE90</version>
             <type>jar</type>
         </dependency>
-        
+       
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-awt</artifactId>
