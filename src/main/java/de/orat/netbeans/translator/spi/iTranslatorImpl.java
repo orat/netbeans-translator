@@ -6,6 +6,10 @@ import java.util.Map;
 /**
  * Service provider interface to register translator implementations.
  * 
+ * TODO
+ * - add methods to priorize implementations
+ * - add methods to plugin translation service authentications
+ * 
  * @author Oliver Rettig
  */
 public interface iTranslatorImpl {
