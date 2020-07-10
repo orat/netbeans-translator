@@ -6,7 +6,7 @@ import java.util.Iterator;
 import org.openide.util.Lookup;
 
 /**
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 public class TranslatorManager {
     

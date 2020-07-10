@@ -8,7 +8,7 @@ import javax.swing.DefaultComboBoxModel;
 import org.openide.util.NbPreferences;
 
 /**
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 public class LanguageJPanel extends javax.swing.JPanel {
 

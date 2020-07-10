@@ -24,7 +24,7 @@ import org.openide.util.NbPreferences;
  * 
  * Open any file, right-click on a selection of text and choose Translate. 
  * 
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 @ActionRegistration(
         displayName = "#CTL_TranslateAction"
@@ -55,6 +55,12 @@ public final class TranslateAction implements ActionListener{
                     TranslateAction.class).get("selectedTargetLanguageCode", "de");
                 
                 Translator translator = TranslatorManager.getInstance().getTranslator();
+                
+                // testweise
+                String msg = NbBundle.getMessage(this.getClass(),"LBL_Invocation_of_service_failed",
+                        translator.getName());
+                System.out.println(msg);
+                
                 try {
                     if (translator != null){
                         String targetText = translator.translate("auto", targetLang, sourceText);
@@ -71,7 +77,9 @@ public final class TranslateAction implements ActionListener{
                     if (translator != null){
                         translatorName = translator.getName();
                     }
-                    StatusDisplayer.getDefault().setStatusText("Invocation of \""+translatorName+"\" service failed!");
+                    //String localized = NbBundle.getMessage(ThisClass.class, "LBL_some_text");
+                    StatusDisplayer.getDefault().setStatusText("Invocation of \""+
+                            translatorName+"\" service failed!");
                 }
             } catch (BadLocationException ex) {
                 Exceptions.printStackTrace(ex);

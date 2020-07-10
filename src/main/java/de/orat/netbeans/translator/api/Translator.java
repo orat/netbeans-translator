@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * Translator API class.
  * 
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 public class Translator {
     

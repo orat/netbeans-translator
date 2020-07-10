@@ -21,7 +21,7 @@ import org.openide.util.NbBundle;
  * available languages:<br>
  * https://cloud.google.com/translate/docs/languages<p>
  *
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 @ServiceProvider(service=de.orat.netbeans.translator.spi.iTranslatorImpl.class)
 public class GoogleTranslator implements iTranslatorImpl {

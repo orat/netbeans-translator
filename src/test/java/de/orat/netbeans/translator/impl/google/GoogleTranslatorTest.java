@@ -6,7 +6,7 @@ import java.util.Map;
 import org.netbeans.junit.NbTestCase;
 
 /**
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 public class GoogleTranslatorTest extends NbTestCase {
 

@@ -10,7 +10,7 @@ import java.util.Map;
  * - add methods to priorize implementations
  * - add methods to plugin translation service authentications
  * 
- * @author Oliver Rettig
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
  */
 public interface iTranslatorImpl {
     

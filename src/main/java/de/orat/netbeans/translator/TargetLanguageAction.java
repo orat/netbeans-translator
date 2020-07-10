@@ -10,6 +10,10 @@ import org.openide.awt.ActionRegistration;
 import org.openide.util.NbBundle.Messages;
 import org.openide.util.actions.Presenter;
 
+/**
+ * 
+ * @author Oliver Rettig (Oliver.Rettig@orat.de)
+ */
 @ActionID(
         category = "Edit",
         id = "de.orat.googletranslate.TargetLanguageAction"
