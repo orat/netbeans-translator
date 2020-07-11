@@ -33,7 +33,7 @@ public class GoogleTranslator implements iTranslatorImpl {
      * @param targetLang en, de
      * @param sourceText source text
      * @return translated text
-     * @throws IOException if no internet connection available, or the thr remote service invocation is failed.<p>
+     * @throws IOException if no internet connection available, or the thr remote service invocation is failed.
      */
     @Override
     public String translate(String sourceLang, String targetLang, 
