@@ -1,5 +1,8 @@
 package de.orat.netbeans.translator;
 
+import static de.orat.netbeans.translator.Bundle.dialog_invocationOfServiceFailed;
+import static de.orat.netbeans.translator.Bundle.dialog_noTranslationServiceAvailable;
+import static de.orat.netbeans.translator.Bundle.dialog_noTranslatorAvailable;
 import de.orat.netbeans.translator.api.Translator;
 import de.orat.netbeans.translator.api.TranslatorManager;
 import java.awt.event.ActionEvent;
@@ -17,6 +20,7 @@ import org.openide.awt.ActionRegistration;
 import org.openide.awt.StatusDisplayer;
 import org.openide.util.Exceptions;
 import org.openide.util.NbBundle;
+import org.openide.util.NbBundle.Messages;
 import org.openide.util.NbPreferences;
 
 /**
@@ -37,7 +41,7 @@ public final class TranslateAction implements ActionListener{
     
     // https://netbeans.apache.org/wiki/DevFaqMultipleProgrammaticEdits.asciidoc
     private class RunnableAction implements Runnable {
-        
+
         private final JTextComponent ed;
         private final Document doc;
         
@@ -46,6 +50,11 @@ public final class TranslateAction implements ActionListener{
             this.doc = doc;
         }
 
+        @Messages({
+            "# {0} - translation service name",
+            "dialog.invocationOfServiceFailed=Invocation of the remote translation service \"{0}\" failed!",
+            "dialog.noTranslationServiceAvailable=No translation service available!"
+        })
         @Override
         public void run(){
             try {
@@ -56,20 +65,17 @@ public final class TranslateAction implements ActionListener{
                 
                 Translator translator = TranslatorManager.getInstance().getTranslator();
                 
-                // testweise
-                String msg = NbBundle.getMessage(this.getClass(),"LBL_Invocation_of_service_failed",
-                        translator.getName());
-                System.out.println(msg);
-                
                 try {
                     if (translator != null){
+                        
                         String targetText = translator.translate("auto", targetLang, sourceText);
                         
                         int start = ed.getSelectionStart();
+                        // throws BadLocationException
                         doc.remove(start, ed.getSelectionEnd()-start);
                         doc.insertString(start, targetText, null);
                     } else {
-                        StatusDisplayer.getDefault().setStatusText("No translator available!");
+                        StatusDisplayer.getDefault().setStatusText(dialog_noTranslationServiceAvailable());
                     }
                 } catch (IOException ex) {
                     Exceptions.printStackTrace(ex);
@@ -77,9 +83,8 @@ public final class TranslateAction implements ActionListener{
                     if (translator != null){
                         translatorName = translator.getName();
                     }
-                    //String localized = NbBundle.getMessage(ThisClass.class, "LBL_some_text");
-                    StatusDisplayer.getDefault().setStatusText("Invocation of \""+
-                            translatorName+"\" service failed!");
+                    StatusDisplayer.getDefault().setStatusText(
+                         dialog_invocationOfServiceFailed(translatorName));
                 }
             } catch (BadLocationException ex) {
                 Exceptions.printStackTrace(ex);
