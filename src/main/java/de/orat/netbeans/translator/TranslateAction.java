@@ -2,7 +2,6 @@ package de.orat.netbeans.translator;
 
 import static de.orat.netbeans.translator.Bundle.dialog_invocationOfServiceFailed;
 import static de.orat.netbeans.translator.Bundle.dialog_noTranslationServiceAvailable;
-import static de.orat.netbeans.translator.Bundle.dialog_noTranslatorAvailable;
 import de.orat.netbeans.translator.api.Translator;
 import de.orat.netbeans.translator.api.TranslatorManager;
 import java.awt.event.ActionEvent;
