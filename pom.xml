@@ -6,14 +6,14 @@
     <version>1.0.0</version>
     <packaging>nbm</packaging>
     <name>Translator</name>
-    <url>http://www.orat.de</url>
+    <url>http://netbeans-translator.orat.de</url>
     <description>Open any file, right-click on a selection of text and choose Translate. Whatever target-language is selected in the toolbar will be used.The default implementation interacts with Google translation service on-line,hence you need to be on-line.</description>
     <developers>
         <developer>
             <id>oliverrettig</id>
             <name>Oliver Rettig</name>
             <email>Oliver.Rettig@orat.de</email>
-            <url>http://netbeans-translator.orat.de</url>
+            <url>http://www.orat.de</url>
         </developer>
     </developers>
     <scm>
