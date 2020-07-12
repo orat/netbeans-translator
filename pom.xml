@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.orat.netbeans</groupId>
     <artifactId>translator</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>nbm</packaging>
     <name>Translator</name>
     <url>http://netbeans-translator.orat.de</url>
